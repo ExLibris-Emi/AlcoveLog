@@ -1,0 +1,41 @@
+body{
+    background:#111827;
+    color:white;
+    font-family:Arial, sans-serif;
+    padding:30px;
+}
+
+h1{
+    color:#f9a8d4;
+    text-align:center;
+}
+
+button{
+    padding:8px 12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:5px;
+}
+
+#list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.history-box {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
