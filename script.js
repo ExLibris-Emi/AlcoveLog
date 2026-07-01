@@ -76,11 +76,14 @@ function addManga() {
 // =========================
 // MARK COMPLETE
 // =========================
-function markCompleted(index) {
-    mangaList[index].status = "Completed ✔️";
-    mangaList[index].lastRead = new Date().toISOString();
+function markCompleted(id) {
+    const manga = mangaList.find(m => m.id === id);
+    if (!manga) return;
 
-    mangaList[index].history.push({
+    manga.status = "Completed ✔️";
+    manga.lastRead = new Date().toISOString();
+
+    manga.history.push({
         action: "Completed",
         timestamp: new Date().toISOString()
     });
@@ -92,8 +95,13 @@ function markCompleted(index) {
 // =========================
 // DELETE
 // =========================
-function deleteManga(index) {
+function deleteManga(id) {
+    const index = mangaList.findIndex(m => m.id === id);
+
+    if (index === -1) return;
+
     mangaList.splice(index, 1);
+
     save();
     renderList();
 }
@@ -142,7 +150,7 @@ function renderList() {
 
             <p>Status: ${manga.status}</p>
 
-            <button onclick="toggleHistory('${manga.id}')">Show History</button>
+            <button onclick="toggleHistory('${manga.id}', event)">Show History</button>
             <div id="history-${manga.id}" class="history-box"></div>
 
             <p class="first-read">📅 First Read: ${
@@ -157,8 +165,8 @@ function renderList() {
                     : "Unknown"
             }</p>
 
-            <button onclick="markCompleted(${index})">Complete</button>
-            <button onclick="deleteManga(${index})">Delete</button>
+            <button onclick="markCompleted('${manga.id}')">Complete</button>
+            <button onclick="deleteManga('${manga.id}')">Delete</button>
         `;
 
         list.appendChild(card);
@@ -208,22 +216,21 @@ function prevPage() {
 // =========================
 // HISTORY TOGGLE
 // =========================
-function toggleHistory(id) {
-    const box = document.getElementById(`history-${id}`);
-
+function toggleHistory(id, event) {
+    const box = document.getElementById("global-history");
     if (!box) return;
 
     const manga = mangaList.find(m => m.id === id);
     const history = manga?.history || [];
 
-    if (box.style.display === "block") {
+    // close if already open
+    if (box.dataset.openId === id && box.style.display === "block") {
         box.style.display = "none";
-        box.innerHTML = "";
+        box.dataset.openId = "";
         return;
     }
 
-    box.style.display = "block";
-
+    // fill content
     box.innerHTML = history.length
         ? history.map(item => `
             <p>
@@ -232,6 +239,16 @@ function toggleHistory(id) {
             </p>
         `).join("")
         : "<p>No history found</p>";
+
+    // position near button
+    const rect = event.target.getBoundingClientRect();
+
+    box.style.top = rect.bottom + window.scrollY + "px";
+    box.style.left = rect.left + "px";
+    box.style.width = "220px";
+
+    box.style.display = "block";
+    box.dataset.openId = id;
 }
 
 // =========================
