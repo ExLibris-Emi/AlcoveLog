@@ -13,7 +13,10 @@ fetch("./manga_history.json")
     .then(res => res.json())
     .then(data => {
 
+        console.log("RAW DATA:", data); // 👈 ADD THIS
+
         mangaList = data.map(entry => ({
+            id: Date.now().toString(36) + Math.random().toString(36).substr(2, 9),
             title: entry.title,
             site: entry.site,
             chapter: entry.chapter || "N/A",
@@ -24,7 +27,12 @@ fetch("./manga_history.json")
             history: entry.history || []
         }));
 
+        console.log("MANGALIST:", mangaList); // 👈 ADD THIS
+
         renderList();
+    })
+    .catch(err => {
+        console.error("FETCH FAILED:", err); // 👈 IMPORTANT
     });
 
 // =========================
@@ -134,8 +142,8 @@ function renderList() {
 
             <p>Status: ${manga.status}</p>
 
-            <button onclick="toggleHistory(${index})">Show History</button>
-            <div id="history-${index}" class="history-box"></div>
+            <button onclick="toggleHistory('${manga.id}')">Show History</button>
+            <div id="history-${manga.id}" class="history-box"></div>
 
             <p class="first-read">📅 First Read: ${
                 manga.firstRead
@@ -200,10 +208,13 @@ function prevPage() {
 // =========================
 // HISTORY TOGGLE
 // =========================
-function toggleHistory(index) {
-    let box = document.getElementById(`history-${index}`);
+function toggleHistory(id) {
+    const box = document.getElementById(`history-${id}`);
 
-    const history = mangaList[index]?.history || [];
+    if (!box) return;
+
+    const manga = mangaList.find(m => m.id === id);
+    const history = manga?.history || [];
 
     if (box.style.display === "block") {
         box.style.display = "none";
