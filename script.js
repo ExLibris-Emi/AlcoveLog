@@ -1,7 +1,13 @@
 let mangaList = [];
+let currentPage = 1;
+const pageSize = 10;
+let searchQuery = "";
+
+let touchStartX = 0;
+let touchEndX = 0;
 
 // =========================
-// LOAD FROM JSON (LIBRARY)
+// LOAD FROM JSON
 // =========================
 fetch("./manga_history.json")
     .then(res => res.json())
@@ -21,17 +27,15 @@ fetch("./manga_history.json")
         renderList();
     });
 
-
 // =========================
-// SAVE (for future manual edits)
+// SAVE (future use)
 // =========================
 function save() {
     localStorage.setItem("mangaList", JSON.stringify(mangaList));
 }
 
-
 // =========================
-// ADD MANGA MANUALLY
+// ADD MANGA
 // =========================
 function addManga() {
     let title = prompt("Enter manga title:");
@@ -61,7 +65,6 @@ function addManga() {
     renderList();
 }
 
-
 // =========================
 // MARK COMPLETE
 // =========================
@@ -78,16 +81,14 @@ function markCompleted(index) {
     renderList();
 }
 
-
 // =========================
-// DELETE MANGA
+// DELETE
 // =========================
 function deleteManga(index) {
     mangaList.splice(index, 1);
     save();
     renderList();
 }
-
 
 // =========================
 // UPDATE LAST READ
@@ -98,24 +99,27 @@ function updateLastRead(index) {
     renderList();
 }
 
-
 // =========================
-// RENDER UI
+// RENDER LIST
 // =========================
 function renderList() {
     let list = document.getElementById("list");
     list.innerHTML = "";
 
-    mangaList.forEach((manga, index) => {
+    let filteredList = mangaList.filter(manga =>
+        manga.title.toLowerCase().includes(searchQuery)
+    );
+
+    let start = (currentPage - 1) * pageSize;
+    let end = start + pageSize;
+
+    let pageItems = filteredList.slice(start, end);
+
+    pageItems.forEach((manga, i) => {
+        let index = start + i;
 
         let card = document.createElement("div");
-
-        card.style.background = "#1f2937";
-        card.style.position = "relative";
-        card.style.padding = "15px";
-        card.style.borderRadius = "12px";
-        card.style.margin = "10px 0";
-        card.style.color = "white";
+        card.className = "card";
 
         card.innerHTML = `
             <h3>
@@ -133,7 +137,7 @@ function renderList() {
             <button onclick="toggleHistory(${index})">Show History</button>
             <div id="history-${index}" class="history-box"></div>
 
-            <p>First Read: ${
+            <p class="first-read">📅 First Read: ${
                 manga.firstRead
                     ? new Date(manga.firstRead).toLocaleString()
                     : "Unknown"
@@ -151,36 +155,94 @@ function renderList() {
 
         list.appendChild(card);
     });
+
+    // page info
+    let pageInfo = document.getElementById("pageInfo");
+
+    if (pageInfo) {
+        let maxPage = Math.ceil(filteredList.length / pageSize);
+        pageInfo.innerText = `Page ${currentPage} / ${maxPage}`;
+    }
 }
 
+// =========================
+// SEARCH
+// =========================
+function handleSearch(value) {
+    searchQuery = value.toLowerCase();
+    currentPage = 1;
+    renderList();
+}
 
 // =========================
-// TOGGLE HISTORY
+// PAGINATION
+// =========================
+function nextPage() {
+    let filteredList = mangaList.filter(manga =>
+        manga.title.toLowerCase().includes(searchQuery)
+    );
+
+    let maxPage = Math.ceil(filteredList.length / pageSize);
+
+    if (currentPage < maxPage) {
+        currentPage++;
+        renderList();
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        renderList();
+    }
+}
+
+// =========================
+// HISTORY TOGGLE
 // =========================
 function toggleHistory(index) {
     let box = document.getElementById(`history-${index}`);
 
-    if (!box.style.display || box.style.display === "none") {
-        box.style.display = box.style.display === "block" ? "none" : "block";
+    const history = mangaList[index]?.history || [];
 
-        const history = mangaList[index]?.history || [];
-
-        box.innerHTML = history.length
-            ? history.map(item => {
-                return `
-                    <p>
-                        • <b>${item.action}</b><br>
-                        ${new Date(item.timestamp).toLocaleString()}
-                    </p>
-                `;
-            }).join("")
-            : "<p>No history found</p>";
-
-    } else {
+    if (box.style.display === "block") {
         box.style.display = "none";
+        box.innerHTML = "";
+        return;
     }
+
+    box.style.display = "block";
+
+    box.innerHTML = history.length
+        ? history.map(item => `
+            <p>
+                • <b>${item.action}</b><br>
+                ${new Date(item.timestamp).toLocaleString()}
+            </p>
+        `).join("")
+        : "<p>No history found</p>";
 }
 
+// =========================
+// SWIPE GESTURE
+// =========================
+document.addEventListener("touchstart", function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+});
 
-// initial render (safe fallback)
-renderList();
+document.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    let diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) < 50) return;
+
+    if (diff > 0) {
+        nextPage();
+    } else {
+        prevPage();
+    }
+}

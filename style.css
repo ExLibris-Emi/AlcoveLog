@@ -1,41 +1,124 @@
-body{
-    background:#111827;
-    color:white;
-    font-family:Arial, sans-serif;
-    padding:30px;
+/* =========================
+   COLOR SYSTEM (YOUR PALETTE)
+   CARD-FIRST DARK UI
+========================= */
+:root {
+    --card: #210124;      /* Midnight Violet → DARKEST (main cards) */
+    --bg: #3D1534;        /* background → slightly lighter than cards */
+    --text: #FFF4EB;      /* Seashell → main text */
+    --accent: #A6BCC9;    /* Powder Blue → highlights/buttons */
+    --muted: #F6E0B6;     /* Wheat → secondary text */
 }
 
-h1{
-    color:#f9a8d4;
-    text-align:center;
+/* =========================
+   BASE LAYOUT
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
 }
 
-button{
-    padding:8px 12px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    margin-top:5px;
+/* =========================
+   TITLE
+========================= */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent);
 }
 
-#list{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-    gap:15px;
-    margin-top:20px;
+/* =========================
+   GRID
+========================= */
+#list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* =========================
+   CARD (DARKEST ELEMENT)
+========================= */
+.card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+
+    position: relative; /* IMPORTANT for popup */
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    overflow: hidden;
+}
+
+/* =========================
+   TITLE HANDLING
+========================= */
+.card h3 a {
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   FIRST READ
+========================= */
+.first-read {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+
+    background: var(--accent);
+    color: #0b1220;
+    font-weight: bold;
+}
+
+/* =========================
+   HISTORY BOX (FIXED POPUP)
+========================= */
 .history-box {
     display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    background: #0f172a;
+    position: relative;   /* IMPORTANT CHANGE */
+    margin-top: 10px;
+
+    background: #111827;
     padding: 10px;
     border-radius: 10px;
-    z-index: 10;
+
     max-height: 200px;
     overflow-y: auto;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
