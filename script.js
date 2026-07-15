@@ -4,7 +4,7 @@ const pageSize = 10;
 let searchQuery = "";
 let lastDataHash = "";
 let selectedMangaId = null;
-
+let selectedHistoryMangaId = null;
 let touchStartX = 0;
 let touchEndX = 0;
 
