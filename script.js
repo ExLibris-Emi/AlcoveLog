@@ -289,19 +289,20 @@ function prevPage(){
 
 
 // =========================
-// HISTORY
+// RECORD LOG
 // =========================
 
 function toggleHistory(id,event){
 
     selectedMangaId = id;
 
-   const box =
-    document.getElementById(
-        "record-log-popup"
-    );
-        
+    const box =
+        document.getElementById(
+            "record-log-popup"
+        );
+
     if(!box) return;
+
 
     const manga =
         mangaList.find(
@@ -309,33 +310,120 @@ function toggleHistory(id,event){
         );
 
 
+    if(!manga) return;
+
+
+    box.innerHTML = `
+
+        <h2>📖 Record Log</h2>
+
+        <p>
+        <b>${manga.title}</b>
+        </p>
+
+        <p>
+        Site:
+        ${manga.site}
+        </p>
+
+
+        <p>
+        Status:
+        ${manga.status}
+        </p>
+
+
+        <p>
+        First Read:
+        ${formatDate(manga.firstRead)}
+        </p>
+
+
+        <p>
+        Last Read:
+        ${formatDate(manga.lastRead)}
+        </p>
+
+
+        <p>
+        Chapter:
+        ${manga.chapter}
+        </p>
+
+
+        <button onclick="openReadingHistory()">
+        Reading History
+        </button>
+
+
+    `;
+
+
+    box.style.display = "block";
+
+}
+
+function openReadingHistory(){
+
+    const historyBox =
+        document.getElementById(
+            "reading-history-popup"
+        );
+
+
+    if(!historyBox) return;
+
+
+    const manga =
+        mangaList.find(
+            m => m.id === selectedMangaId
+        );
+
+
     const history =
         manga?.history || [];
 
 
+    historyBox.innerHTML = `
 
-    box.innerHTML =
-        history.length
+        <h2>Reading History</h2>
 
-        ?
+        ${
+            history.length
 
-        history.map(item => `
+            ?
 
-        <p>
-        • <b>${item.action}</b><br>
-        ${new Date(item.timestamp).toLocaleString()}
-        </p>
+            history.map(item => `
 
-        `).join("")
+            <p>
+            • ${item.action}<br>
+            ${formatDate(item.timestamp)}
+            </p>
+
+            `).join("")
+
+            :
+
+            "<p>No history found</p>"
+        }
 
 
-        :
+        <button onclick="closeReadingHistory()">
+        Close
+        </button>
 
-        "<p>No history found</p>";
+    `;
 
 
+    historyBox.style.display = "block";
 
-    box.style.display="block";
+}
+
+function closeReadingHistory(){
+
+    document.getElementById(
+        "reading-history-popup"
+    ).style.display = "none";
 
 }
 
