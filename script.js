@@ -98,6 +98,22 @@ function save() {
 }
 
 
+function formatDate(dateString) {
+
+    if (!dateString) return "Unknown";
+
+    const date = new Date(dateString);
+
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+
+    return `${day}/${month}/${year} | ${hours}:${minutes}`;
+
+}
 
 // =========================
 // RENDER LIST
@@ -186,21 +202,13 @@ function renderList() {
 
         <p>
         📅 First Read:
-        ${
-            manga.firstRead
-            ? new Date(manga.firstRead).toLocaleString()
-            : "Unknown"
-        }
+        ${formatDate(manga.firstRead)}
         </p>
 
 
         <p>
         Last Read:
-        ${
-            manga.lastRead
-            ? new Date(manga.lastRead).toLocaleString()
-            : "Unknown"
-        }
+        ${formatDate(manga.lastRead)}
         </p>
 
         `;
