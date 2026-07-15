@@ -2103,5 +2103,30 @@
                 "url": "https://mangak.io/eleceed/chapter-1"
             }
         ]
+    },
+    {
+        "site": "mangak.io",
+        "title": "Accidental baby",
+        "chapter": "1",
+        "first_read": "2026-07-15 09:25:19.511000",
+        "last_read": "2026-07-15 09:25:24.520000",
+        "url": "https://mangak.io/accidental-baby/chapter-1",
+        "history": [
+            {
+                "action": "Visited chapter 0",
+                "timestamp": "2026-07-15 09:25:19.511000",
+                "url": "https://mangak.io/accidental-baby/chapter-0"
+            },
+            {
+                "action": "Visited chapter 0.1",
+                "timestamp": "2026-07-15 09:25:21.023000",
+                "url": "https://mangak.io/accidental-baby/chapter-0-1"
+            },
+            {
+                "action": "Visited chapter 1",
+                "timestamp": "2026-07-15 09:25:24.520000",
+                "url": "https://mangak.io/accidental-baby/chapter-1"
+            }
+        ]
     }
 ]
