@@ -108,13 +108,19 @@ function formatDate(dateString) {
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
 
-    const hours = String(date.getHours()).padStart(2, "0");
+    let hours = date.getHours();
     const minutes = String(date.getMinutes()).padStart(2, "0");
 
-    return `${day}/${month}/${year} | ${hours}:${minutes}`;
+    const ampm = hours >= 12 ? "PM" : "AM";
 
-}
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    
+    hours = String(hours).padStart(2, "0");
+    
+    return `${day}/${month}/${year} | ${hours}:${minutes} ${ampm}`;
 
+    
 // =========================
 // RENDER LIST
 // =========================
