@@ -189,10 +189,7 @@ function renderList() {
         <p>Site: ${manga.site}</p>
 
 
-        <p>
-        <b>Chapter:</b>
-        ${manga.chapter}
-        </p>
+
 
 
         <p>
@@ -202,7 +199,7 @@ function renderList() {
 
 
         <button onclick="toggleHistory('${manga.id}', event)">
-        Show History
+        Record Log
         </button>
 
 
