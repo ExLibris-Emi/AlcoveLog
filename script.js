@@ -3,6 +3,7 @@ let currentPage = 1;
 const pageSize = 10;
 let searchQuery = "";
 let lastDataHash = "";
+let selectedMangaId = null;
 
 let touchStartX = 0;
 let touchEndX = 0;
@@ -292,6 +293,13 @@ function prevPage(){
 // =========================
 
 function toggleHistory(id,event){
+
+    selectedMangaId = id;
+
+    const box =
+        document.getElementById(
+            "global-history"
+        );
 
 
     const box =
