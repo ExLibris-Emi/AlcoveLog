@@ -111,15 +111,23 @@ button {
 ========================= */
 .history-box {
     display: none;
-    position: absolute;
+    position: fixed;
 
-    background: #111827;
-    padding: 10px;
-    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    max-height: 200px;
+    width: 320px;
+    max-height: 70vh;
     overflow-y: auto;
 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    background: var(--card);
+    color: var(--text);
+
+    padding: 20px;
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
     z-index: 9999;
 }
