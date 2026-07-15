@@ -296,10 +296,10 @@ function toggleHistory(id,event){
 
     selectedMangaId = id;
 
-    const box =
-        document.getElementById(
-            "global-history"
-        );
+   const box =
+    document.getElementById(
+        "record-log-popup"
+    );
         
     if(!box) return;
 
