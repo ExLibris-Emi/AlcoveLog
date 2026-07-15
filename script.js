@@ -119,8 +119,8 @@ function formatDate(dateString) {
     hours = String(hours).padStart(2, "0");
     
     return `${day}/${month}/${year} | ${hours}:${minutes} ${ampm}`;
+}
 
-    
 // =========================
 // RENDER LIST
 // =========================
