@@ -300,17 +300,8 @@ function toggleHistory(id,event){
         document.getElementById(
             "global-history"
         );
-
-
-    const box =
-        document.getElementById(
-            "global-history"
-        );
-
-
+        
     if(!box) return;
-
-
 
     const manga =
         mangaList.find(
