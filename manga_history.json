@@ -2089,7 +2089,7 @@
         "title": "Eleceed",
         "chapter": "1",
         "first_read": "2026-07-14 18:04:48.821000",
-        "last_read": "2026-07-14 18:04:50.991000",
+        "last_read": "2026-07-16 09:42:43.504000",
         "url": "https://mangak.io/eleceed/chapter-1",
         "history": [
             {
@@ -2109,7 +2109,7 @@
         "title": "Accidental baby",
         "chapter": "1",
         "first_read": "2026-07-15 09:25:19.511000",
-        "last_read": "2026-07-15 09:25:24.520000",
+        "last_read": "2026-07-15 21:32:33.036000",
         "url": "https://mangak.io/accidental-baby/chapter-1",
         "history": [
             {
@@ -2126,6 +2126,106 @@
                 "action": "Visited chapter 1",
                 "timestamp": "2026-07-15 09:25:24.520000",
                 "url": "https://mangak.io/accidental-baby/chapter-1"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "The Hottie's Drowning in the Sheets! [Eng]",
+        "chapter": "7",
+        "first_read": "2026-07-16 00:32:00.267000",
+        "last_read": "2026-07-16 00:48:48.130000",
+        "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/7/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-16 00:32:00.267000",
+                "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/2/"
+            },
+            {
+                "action": "Visited chapter 3",
+                "timestamp": "2026-07-16 00:36:59.826000",
+                "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/3/"
+            },
+            {
+                "action": "Visited chapter 4",
+                "timestamp": "2026-07-16 00:41:34.651000",
+                "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/4/"
+            },
+            {
+                "action": "Visited chapter 5",
+                "timestamp": "2026-07-16 00:44:22.497000",
+                "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/5/"
+            },
+            {
+                "action": "Visited chapter 6",
+                "timestamp": "2026-07-16 00:47:33.931000",
+                "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/6/"
+            },
+            {
+                "action": "Visited chapter 7",
+                "timestamp": "2026-07-16 00:48:48.130000",
+                "url": "https://myreadingmanga.info/hinomizu-makoto-the-hotties-drowning-in-the-sheets-eng/7/"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "Anemone no Shishuu [Eng]",
+        "chapter": "6",
+        "first_read": "2026-07-16 00:56:52.832000",
+        "last_read": "2026-07-16 01:10:17.343000",
+        "url": "https://myreadingmanga.info/mm-anemone-no-shishuu-eng/6/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-16 00:56:52.832000",
+                "url": "https://myreadingmanga.info/mm-anemone-no-shishuu-eng/2/"
+            },
+            {
+                "action": "Visited chapter 3",
+                "timestamp": "2026-07-16 01:01:33.263000",
+                "url": "https://myreadingmanga.info/mm-anemone-no-shishuu-eng/3/"
+            },
+            {
+                "action": "Visited chapter 4",
+                "timestamp": "2026-07-16 01:02:43.301000",
+                "url": "https://myreadingmanga.info/mm-anemone-no-shishuu-eng/4/"
+            },
+            {
+                "action": "Visited chapter 5",
+                "timestamp": "2026-07-16 01:04:47.823000",
+                "url": "https://myreadingmanga.info/mm-anemone-no-shishuu-eng/5/"
+            },
+            {
+                "action": "Visited chapter 6",
+                "timestamp": "2026-07-16 01:10:17.343000",
+                "url": "https://myreadingmanga.info/mm-anemone-no-shishuu-eng/6/"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "Young Good Boyfriend [Eng]",
+        "chapter": "4",
+        "first_read": "2026-07-16 01:16:24.875000",
+        "last_read": "2026-07-16 09:42:30.945000",
+        "url": "https://myreadingmanga.info/dayoo-young-good-boyfriend-eng/4/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-16 01:16:24.875000",
+                "url": "https://myreadingmanga.info/dayoo-young-good-boyfriend-eng/2/"
+            },
+            {
+                "action": "Visited chapter 3",
+                "timestamp": "2026-07-16 01:22:17.843000",
+                "url": "https://myreadingmanga.info/dayoo-young-good-boyfriend-eng/3/"
+            },
+            {
+                "action": "Visited chapter 4",
+                "timestamp": "2026-07-16 01:23:33.726000",
+                "url": "https://myreadingmanga.info/dayoo-young-good-boyfriend-eng/4/"
             }
         ]
     }
