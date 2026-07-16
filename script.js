@@ -223,9 +223,17 @@ function renderList() {
         let maxPage =
             Math.ceil(filteredList.length / pageSize);
 
+
+        if(currentPage > maxPage){
+
+            currentPage = maxPage || 1;
+        
+        }
+
+
         pageInfo.innerText =
             `Page ${currentPage} / ${maxPage}`;
-
+    
     }
 
 }
@@ -269,9 +277,25 @@ function clearSearch(){
 
 function nextPage(){
 
-    currentPage++;
+    const filteredList =
+        mangaList.filter(manga =>
+            manga.title
+            .toLowerCase()
+            .includes(searchQuery)
+        );
 
-    renderList();
+
+    const maxPage =
+        Math.ceil(filteredList.length / pageSize);
+
+
+    if(currentPage < maxPage){
+
+        currentPage++;
+
+        renderList();
+
+    }
 
 }
 
