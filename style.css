@@ -14,11 +14,23 @@
    BASE LAYOUT
 ========================= */
 body {
+
     font-family: Arial, sans-serif;
+
     background: var(--bg);
+
     color: var(--text);
+
     margin: 0;
+
     padding: 20px;
+
+    -moz-text-size-adjust: none;
+
+    -webkit-text-size-adjust: none;
+
+    text-size-adjust: none;
+
 }
 
 /* =========================
@@ -234,6 +246,10 @@ button {
 .archive-info h3 {
 
     margin: 0 0 8px 0;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
 
 }
 
