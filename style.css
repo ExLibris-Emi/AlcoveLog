@@ -34,32 +34,51 @@ h1 {
    GRID
 ========================= */
 #list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* =========================
-   CARD (DARKEST ELEMENT)
-========================= */
-.card {
-    background: var(--card);
-    padding: 15px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-
-    position: relative; /* IMPORTANT for popup */
 
     display: flex;
-    flex-direction: column;
-    gap: 8px;
 
-    overflow: hidden;
-    transition: all 0.2s ease;
+    flex-direction: column;
+
+    gap: 3px;   /* was 8px */
+
+    margin-top: 15px;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+.card {
+
+    background: var(--card);
+
+    padding: 18px 16px;  /* was 12px 16px */
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;   /* was 5px */
+
+}
+
+
+.card p {
+
+    margin: 6px 0;  /* was 4px */
+
 }
 
 /* =========================
