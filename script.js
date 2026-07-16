@@ -170,52 +170,41 @@ function renderList() {
     pageItems.forEach(manga => {
 
 
-        let card =
-            document.createElement("div");
+        let card = document.createElement("div");
+        
+        card.className = "archive-entry";
+        
+    card.innerHTML = `
+    
+    <div class="archive-info">
+    
+    <h3>
+    <a href="${manga.url || '#'}" target="_blank">
+    ${manga.title}
+    </a>
+    </h3>
+    
+    <p>
+    Status: ${manga.status}
+    </p>
+    
+    <p>
+    First Read:
+    ${formatDate(manga.firstRead)}
+    </p>
 
+    <p>
+    Last Read:
+    ${formatDate(manga.lastRead)}
+    </p>
 
-        card.className = "card";
+    </div>
 
+    <button onclick="toggleHistory('${manga.id}', event)">
+    Record Log
+    </button>
 
-
-        card.innerHTML = `
-
-        <h3>
-            <a href="${manga.url || '#'}" target="_blank">
-                ${manga.title}
-            </a>
-        </h3>
-
-
-        <p>Site: ${manga.site}</p>
-
-
-
-
-
-        <p>
-        Status:
-        ${manga.status}
-        </p>
-
-
-        <button onclick="toggleHistory('${manga.id}', event)">
-        Record Log
-        </button>
-
-
-        <p>
-        📅 First Read:
-        ${formatDate(manga.firstRead)}
-        </p>
-
-
-        <p>
-        Last Read:
-        ${formatDate(manga.lastRead)}
-        </p>
-
-        `;
+    `;
 
 
         list.appendChild(card);

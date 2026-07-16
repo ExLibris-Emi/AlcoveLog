@@ -131,3 +131,37 @@ button {
 
     z-index: 9999;
 }
+
+.archive-entry {
+
+    background: var(--card);
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.archive-info h3 {
+
+    margin: 0 0 8px 0;
+
+}
+
+
+.archive-info p {
+
+    margin: 4px 0;
+
+}
