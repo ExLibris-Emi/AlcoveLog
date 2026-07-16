@@ -211,6 +211,12 @@ button {
 
 }
 
+.archive-info {
+
+    flex: 1;
+
+}
+
 
 .archive-info h3 {
 
