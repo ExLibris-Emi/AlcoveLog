@@ -41,9 +41,9 @@ async function loadData() {
 
         mangaList = data.map(entry => ({
 
-            id:
-                Date.now().toString(36) +
-                Math.random().toString(36).substr(2, 9),
+            id: btoa(entry.url || entry.title)
+                .replace(/[^a-zA-Z0-9]/g, "")
+                .substring(0, 20),
 
             title: entry.title,
 
