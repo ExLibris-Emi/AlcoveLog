@@ -315,51 +315,56 @@ function toggleHistory(id,event){
 
     box.innerHTML = `
 
-        <h2>📖 Record Log</h2>
+    <h2>📖 Record Log</h2>
 
-        <p>
-        <b>${manga.title}</b>
-        </p>
+    <hr>
 
-        <p>
-        Site:
-        ${manga.site}
-        </p>
+    <h3>
+    <a href="${manga.url || '#'}" target="_blank">
+        ${manga.title}
+    </a>
+    </h3>
 
+    <div class="record-row">
+        <span>Site</span>
+        <span>${manga.site}</span>
+    </div>
 
-        <p>
-        Status:
-        ${manga.status}
-        </p>
+    <div class="record-row">
+        <span>Status</span>
+        <span>${manga.status}</span>
+    </div>
 
+    <div class="record-row">
+        <span>First Read</span>
+        <span>${formatDate(manga.firstRead)}</span>
+    </div>
 
-        <p>
-        First Read:
-        ${formatDate(manga.firstRead)}
-        </p>
+    <div class="record-row">
+        <span>Last Read</span>
+        <span>${formatDate(manga.lastRead)}</span>
+    </div>
 
+    <div class="record-row">
+        <span>Chapter</span>
+        <span>${manga.chapter}</span>
+    </div>
 
-        <p>
-        Last Read:
-        ${formatDate(manga.lastRead)}
-        </p>
+    <hr>
 
+    <button onclick="openReadingHistory()">
+        📖 Reading History →
+    </button>
 
-        <p>
-        Chapter:
-        ${manga.chapter}
-        </p>
-
-
-        <button onclick="openReadingHistory()">
-        Reading History
-        </button>
-        
+    <div class="popup-actions">
         <button onclick="closeRecordLog()">
-        Close
+            Close
         </button>
 
-
+        <button class="delete-btn" onclick="openDeletePopup()">
+            Delete
+        </button>
+    </div>
     `;
 
 
@@ -371,6 +376,10 @@ function closeRecordLog(){
 
     document.getElementById(
         "record-log-popup"
+    ).style.display = "none";
+
+    document.getElementById(
+        "reading-history-popup"
     ).style.display = "none";
 
 }
