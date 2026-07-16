@@ -15,20 +15,20 @@
 </div>
 <button onclick="addManga()">Add Manga</button>
 
-<div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center; align-items: center;">
-    <button onclick="prevPage()">⬅ Prev</button>
-    <span id="pageInfo"></span>
-    <button onclick="nextPage()">Next ➡</button>
-</div>
-
 <div style="margin: 15px 0; text-align: center;">
     <input
         type="text"
         id="searchBox"
         placeholder="Search manga..."
         oninput="handleSearch(this.value)"
-        style="padding: 8px; width: 60%; border-radius: 8px; border: none;"
+        style="padding: 12px; width: 75%; max-width: 500px; border-radius: 10px; border: none; font-size: 16px;"
     />
+</div>
+
+<div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center; align-items: center;">
+    <button onclick="prevPage()">⬅ Prev</button>
+    <span id="pageInfo"></span>
+    <button onclick="nextPage()">Next ➡</button>
 </div>
 
 <div id="list"></div>
