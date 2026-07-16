@@ -184,3 +184,26 @@ button {
     margin: 4px 0;
 
 }
+
+.manga-title a,
+.card h3 a,
+.archive-info h3 a,
+.history-box h3 a {
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.manga-title a:hover,
+.card h3 a:hover,
+.archive-info h3 a:hover,
+.history-box h3 a:hover {
+
+    color: var(--accent);
+
+}
