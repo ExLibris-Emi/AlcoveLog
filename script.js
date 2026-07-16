@@ -247,6 +247,20 @@ function handleSearch(value){
 
 }
 
+function clearSearch(){
+
+    const box = document.getElementById("searchBox");
+
+    box.value = "";
+
+    searchQuery = "";
+
+    currentPage = 1;
+
+    renderList();
+
+}
+
 
 
 // =========================
