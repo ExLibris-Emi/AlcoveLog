@@ -354,12 +354,24 @@ function toggleHistory(id,event){
         <button onclick="openReadingHistory()">
         Reading History
         </button>
+        
+        <button onclick="closeRecordLog()">
+        Close
+        </button>
 
 
     `;
 
 
     box.style.display = "block";
+
+}
+
+function closeRecordLog(){
+
+    document.getElementById(
+        "record-log-popup"
+    ).style.display = "none";
 
 }
 
