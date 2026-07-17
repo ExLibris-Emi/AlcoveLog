@@ -5,22 +5,50 @@
 
     
 
-    <title>Emi's Manga Archive</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="header">
-    <div class="logo">📚 Emi’s Manga Archive</div>
-</div>
-<button onclick="addManga()">Add Manga</button>
+<header class="header">
+
+    <div class="brand">
+
+        <img src="logo.png" id="siteLogo" alt="AlcoveLog Logo">
+
+        <div class="brand-text">
+
+            <h1>AlcoveLog</h1>
+
+            <span>Your Archivum</span>
+
+        </div>
+
+    </div>
+
+    <nav class="header-actions">
+
+        <button id="addBtn" onclick="addManga()" title="Add">
+            ✢
+        </button>
+
+        <button id="profileBtn" title="Profile">
+            👤
+        </button>
+
+        <button id="themeBtn" title="Theme">
+           ࣪ ִֶָ☾.
+        </button>
+
+    </nav>
+
+</header>
 
 <div class="search-container">
 
     <input
         type="text"
         id="searchBox"
-        placeholder="Search manga..."
+        placeholder="Search your Archivum..."
         oninput="handleSearch(this.value)"
     />
 

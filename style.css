@@ -268,3 +268,96 @@ button {
     color: var(--accent);
 
 }
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+#siteLogo {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+
+}
+
+.brand-text h1 {
+
+    margin: 0;
+
+    font-size: 1.5rem;
+
+    color: var(--accent);
+
+}
+
+.brand-text span {
+
+    display: block;
+
+    font-size: 0.85rem;
+
+    color: var(--muted);
+
+    margin-top: 2px;
+
+}
+
+.header-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+.header-actions button {
+
+    width: 42px;
+
+    height: 42px;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 1.1rem;
+
+}
