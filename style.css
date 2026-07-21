@@ -247,7 +247,7 @@ button {
 
     margin: 0 0 8px 0;
 
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 
     font-weight: bold;
 
@@ -255,6 +255,10 @@ button {
 
 
 .archive-info p {
+    
+    font-size: 1.05rem;
+
+    line-height: 1.35;
 
     margin: 4px 0;
 
@@ -317,7 +321,9 @@ button {
 
     margin: 0;
 
-    font-size: 1.5rem;
+    font-size: 2.4rem;
+
+    line-height: 1;
 
     color: var(--accent);
 
@@ -329,11 +335,13 @@ button {
 
     display: block;
 
-    font-size: 0.85rem;
+    font-size: 1.65rem;
+
+    line-height: 1;
 
     color: var(--muted);
 
-    margin-top: 2px;
+    margin-top: 6px;
 
 }
 
@@ -361,4 +369,34 @@ button {
 
     font-size: 1.1rem;
 
+}
+
+/* =========================
+   TYPOGRAPHY TEST SYSTEM
+========================= */
+
+.brand-text h1{
+    font-family:"IM Fell English SC", serif;
+}
+
+.brand-text span {
+    font-family: "Fleur De Leah", cursive;
+}
+
+.archive-info h3 {
+    font-family: "Libre Baskerville", serif;
+}
+
+.archive-info p {
+    font-family: "Roboto Slab", serif;
+}
+
+
+.history-box {
+    font-family: "Special Elite", monospace;
+}
+
+
+.search-container input {
+    font-family: "Pinyon Script", cursive;
 }
