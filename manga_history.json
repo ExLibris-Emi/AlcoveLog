@@ -2287,10 +2287,10 @@
     {
         "site": "myreadingmanga.info",
         "title": "Happy Shitty Life - Volume 1 [Eng]",
-        "chapter": "3",
+        "chapter": "10",
         "first_read": "2026-07-18 15:36:41.999000",
-        "last_read": "2026-07-18 16:10:13.791000",
-        "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/3/",
+        "last_read": "2026-07-23 23:35:42.500000",
+        "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/10/",
         "history": [
             {
                 "action": "Visited chapter 2",
@@ -2301,6 +2301,41 @@
                 "action": "Visited chapter 3",
                 "timestamp": "2026-07-18 16:10:13.791000",
                 "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/3/"
+            },
+            {
+                "action": "Visited chapter 4",
+                "timestamp": "2026-07-23 21:04:41.734000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/4/"
+            },
+            {
+                "action": "Visited chapter 6",
+                "timestamp": "2026-07-23 22:34:38.087000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/6/"
+            },
+            {
+                "action": "Visited chapter 5",
+                "timestamp": "2026-07-23 22:35:00.014000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/5/"
+            },
+            {
+                "action": "Visited chapter 7",
+                "timestamp": "2026-07-23 23:02:53.785000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/7/"
+            },
+            {
+                "action": "Visited chapter 8",
+                "timestamp": "2026-07-23 23:23:37.911000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/8/"
+            },
+            {
+                "action": "Visited chapter 9",
+                "timestamp": "2026-07-23 23:26:02.812000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/9/"
+            },
+            {
+                "action": "Visited chapter 10",
+                "timestamp": "2026-07-23 23:35:42.500000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-eng/10/"
             }
         ]
     },
@@ -2366,6 +2401,91 @@
                 "action": "Visited chapter 1",
                 "timestamp": "2026-07-19 01:22:26.587000",
                 "url": "https://mangak.io/enigmatica/chapter-1"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "Yandato! 1+2 - Yotsubato dj [Eng]",
+        "chapter": "2",
+        "first_read": "2026-07-23 21:51:51.146000",
+        "last_read": "2026-07-23 21:51:51.146000",
+        "url": "https://myreadingmanga.info/hideyoshico-yandato-12-yotsubato-dj-eng/2/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-23 21:51:51.146000",
+                "url": "https://myreadingmanga.info/hideyoshico-yandato-12-yotsubato-dj-eng/2/"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "Himitsu ni Otsu [Eng] (Colorized)",
+        "chapter": "2",
+        "first_read": "2026-07-23 21:57:53.114000",
+        "last_read": "2026-07-23 21:57:53.114000",
+        "url": "https://myreadingmanga.info/nugget-bun-nageya-san-nugget-himitsu-ni-otsu-eng-colorized/2/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-23 21:57:53.114000",
+                "url": "https://myreadingmanga.info/nugget-bun-nageya-san-nugget-himitsu-ni-otsu-eng-colorized/2/"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "Perfect Planet - Vol.01 [Eng]",
+        "chapter": "4",
+        "first_read": "2026-07-23 22:28:53.765000",
+        "last_read": "2026-07-23 22:33:30.934000",
+        "url": "https://myreadingmanga.info/iimo-perfect-planet-eng/4/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-23 22:28:53.765000",
+                "url": "https://myreadingmanga.info/iimo-perfect-planet-eng/2/"
+            },
+            {
+                "action": "Visited chapter 3",
+                "timestamp": "2026-07-23 22:30:23.992000",
+                "url": "https://myreadingmanga.info/iimo-perfect-planet-eng/3/"
+            },
+            {
+                "action": "Visited chapter 4",
+                "timestamp": "2026-07-23 22:33:30.934000",
+                "url": "https://myreadingmanga.info/iimo-perfect-planet-eng/4/"
+            }
+        ]
+    },
+    {
+        "site": "myreadingmanga.info",
+        "title": "Happy Shitty Life - Volume 2 [Eng]",
+        "chapter": "5",
+        "first_read": "2026-07-23 23:53:59.772000",
+        "last_read": "2026-07-24 00:24:24.721000",
+        "url": "https://myreadingmanga.info/harada-happy-shitty-life-volume-2-eng/5/",
+        "history": [
+            {
+                "action": "Visited chapter 2",
+                "timestamp": "2026-07-23 23:53:59.772000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-volume-2-eng/2/"
+            },
+            {
+                "action": "Visited chapter 3",
+                "timestamp": "2026-07-24 00:06:28.728000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-volume-2-eng/3/"
+            },
+            {
+                "action": "Visited chapter 4",
+                "timestamp": "2026-07-24 00:13:29.625000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-volume-2-eng/4/"
+            },
+            {
+                "action": "Visited chapter 5",
+                "timestamp": "2026-07-24 00:24:24.721000",
+                "url": "https://myreadingmanga.info/harada-happy-shitty-life-volume-2-eng/5/"
             }
         ]
     }
