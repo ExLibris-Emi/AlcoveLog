@@ -400,3 +400,104 @@ button {
 .search-container input {
     font-family: "Pinyon Script", cursive;
 }
+
+/* =========================
+   RECORD LOG POPUP
+========================= */
+
+.record-header{
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.record-header h2{
+    margin:0;
+    font-family:"IM Fell English SC", serif;
+    font-size:2rem;
+    color:var(--accent);
+}
+
+.record-header a{
+    display:block;
+    margin-top:10px;
+    text-decoration:none;
+    color:var(--text);
+    font-family:"Libre Baskerville", serif;
+    font-size:1.25rem;
+}
+
+.record-header a:hover{
+    color:var(--muted);
+}
+
+.record-section{
+    margin:18px 0;
+}
+
+.record-section h3{
+    margin:0 0 12px 0;
+    font-family:"Roboto Slab", serif;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+
+.record-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:8px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    font-family:"Roboto Slab", serif;
+}
+
+.record-row:last-child{
+    border-bottom:none;
+}
+
+.record-row span:first-child{
+    color:var(--muted);
+    font-weight:600;
+}
+
+.record-row span:last-child{
+    color:var(--text);
+}
+
+.record-actions{
+    margin-top:18px;
+    text-align:center;
+}
+
+.record-actions button{
+    width:100%;
+}
+
+.popup-actions{
+    display:flex;
+    gap:10px;
+    margin-top:16px;
+}
+
+.popup-actions button{
+    flex:1;
+}
+
+.delete-btn{
+    background:#8A2D2D;
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#A63B3B;
+}
+
+.history-box hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.12);
+    margin:18px 0;
+}

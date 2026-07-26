@@ -4,7 +4,6 @@ const pageSize = 10;
 let searchQuery = "";
 let lastDataHash = "";
 let selectedMangaId = null;
-let selectedHistoryMangaId = null;
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -200,7 +199,7 @@ function renderList() {
 
     </div>
 
-    <button onclick="toggleHistory('${manga.id}', event)">
+    onclick="toggleHistory('${manga.id}')"
     Record Log
     </button>
 
@@ -319,7 +318,7 @@ function prevPage(){
 // RECORD LOG
 // =========================
 
-function toggleHistory(id,event){
+function toggleHistory(id){
 
     selectedMangaId = id;
 
@@ -338,29 +337,54 @@ function toggleHistory(id,event){
 
 
     if(!manga) return;
-
-
+    
+    
+    
     box.innerHTML = `
+    
+    <div class="record-header">
 
-    <h2>📖 Record Log</h2>
+    <h2>Record Log</h2>
 
-    <hr>
-
-    <h3>
     <a href="${manga.url || '#'}" target="_blank">
         ${manga.title}
     </a>
-    </h3>
+    
+    </div>
+    
+    <hr>
+    
+    <div class="record-section">
+
+    <h3>Current Progress</h3>
 
     <div class="record-row">
-        <span>Site</span>
-        <span>${manga.site}</span>
+    <span>Site</span>
+    <span>${manga.site}</span>
+    </div>
+
+    <div class="record-row">
+        <span>Chapter</span>
+        <span>${manga.chapter}</span>
     </div>
 
     <div class="record-row">
         <span>Status</span>
         <span>${manga.status}</span>
     </div>
+
+    <div class="record-row">
+    <span>Site</span>
+    <span>${manga.site}</span>
+    </div>
+    
+    </div>
+    
+    <hr>
+    
+    <div class="record-section">
+
+    <h3>Timeline</h3>
 
     <div class="record-row">
         <span>First Read</span>
@@ -371,27 +395,31 @@ function toggleHistory(id,event){
         <span>Last Read</span>
         <span>${formatDate(manga.lastRead)}</span>
     </div>
-
-    <div class="record-row">
-        <span>Chapter</span>
-        <span>${manga.chapter}</span>
+    
     </div>
-
+    
     <hr>
+    
+    <div class="record-actions">
 
     <button onclick="openReadingHistory()">
-        📖 Reading History →
+        Reading History →
+    </button>
+    
+    </div>
+    
+    <div class="popup-actions">
+
+    <button onclick="closeRecordLog()">
+        Close
     </button>
 
-    <div class="popup-actions">
-        <button onclick="closeRecordLog()">
-            Close
-        </button>
-
-        <button class="delete-btn" onclick="openDeletePopup()">
-            Delete
-        </button>
+    <button class="delete-btn" onclick="openDeletePopup()">
+        Delete
+    </button>
+    
     </div>
+    
     `;
 
 
