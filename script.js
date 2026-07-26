@@ -199,8 +199,8 @@ function renderList() {
 
     </div>
 
-    onclick="toggleHistory('${manga.id}')"
-    Record Log
+    <button onclick="toggleHistory('${manga.id}')">
+        Record Log
     </button>
 
     `;
@@ -371,11 +371,6 @@ function toggleHistory(id){
     <div class="record-row">
         <span>Status</span>
         <span>${manga.status}</span>
-    </div>
-
-    <div class="record-row">
-    <span>Site</span>
-    <span>${manga.site}</span>
     </div>
     
     </div>
