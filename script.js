@@ -40,8 +40,10 @@ async function loadData() {
 
         mangaList = data.map(entry => ({
 
-            id: crypto.randomUUID(),
-            
+            id: btoa(entry.url || entry.title)
+            .replace(/[^a-zA-Z0-9]/g, "")
+            .substring(0,20),
+
             title: entry.title,
 
             site: entry.site,
