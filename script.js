@@ -363,9 +363,9 @@ function toggleHistory(id){
     <span>${manga.site}</span>
     </div>
 
-    <div class="record-row">
-        <span>Chapter</span>
-        <span>${manga.chapter}</span>
+    <div class="record-row chapter-row">
+    <span>Chapter</span>
+    <span>${manga.chapter}</span>
     </div>
 
     <div class="record-row">
