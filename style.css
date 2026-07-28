@@ -199,17 +199,17 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 320px;
-    max-height: 70vh;
+    width: min(92vw, 500px);
+    max-height: 82vh;
     overflow-y: auto;
 
     background: var(--card);
     color: var(--text);
 
-    padding: 20px;
-    border-radius: 14px;
+    padding: 28px;
+    border-radius: 18px;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 14px 40px rgba(0,0,0,.6);
 
     z-index: 9999;
 }
@@ -413,17 +413,18 @@ button {
 .record-header h2{
     margin:0;
     font-family:"IM Fell English SC", serif;
-    font-size:2rem;
+    font-size:2.35rem;
     color:var(--accent);
 }
 
 .record-header a{
     display:block;
-    margin-top:10px;
+    margin-top:12px;
     text-decoration:none;
     color:var(--text);
     font-family:"Libre Baskerville", serif;
-    font-size:1.25rem;
+    font-size:1.45rem;
+    line-height:1.45;
 }
 
 .record-header a:hover{
@@ -431,7 +432,7 @@ button {
 }
 
 .record-section{
-    margin:18px 0;
+    margin:26px 0;
 }
 
 .record-section h3{
@@ -448,7 +449,7 @@ button {
     justify-content:space-between;
     align-items:center;
 
-    padding:8px 0;
+    padding:14px 0;
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
@@ -475,6 +476,15 @@ button {
 
 .record-actions button{
     width:100%;
+}
+
+.record-actions button,
+.popup-actions button{
+
+    min-height:48px;
+
+    font-size:1rem;
+
 }
 
 .popup-actions{
